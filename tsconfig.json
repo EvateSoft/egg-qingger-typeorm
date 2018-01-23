@@ -1,0 +1,51 @@
+{
+  // 编辑选项
+  // @see https://www.jianshu.com/p/9162d54d4821
+  "compilerOptions": {
+
+    // 指定生成哪个模块系统代码："None"，"CommonJS"，"AMD"，"System"，"UMD"，"ES6"或"ES2015"。
+    "module": "CommonJS",
+
+    // target 表示编译后的ECMAScript目标版本
+    // 使用koa2,则编译成下一个es版本(es2017)
+    "target": "esnext",
+
+    "sourceMap": true,
+
+    // Raise error on expressions and declarations with an implied ‘any’ type.
+    "noImplicitAny": false,
+
+    // 给错误和消息设置样式，使用颜色和上下文
+    "pretty" : true,
+
+    // 启用实验性的ES装饰器，具体查看:https://www.tslang.cn/docs/handbook/decorators.html
+    "experimentalDecorators" : true,
+
+    // allowSyntheticDefaultImports 选项允许我们使用以下内容 : import Vue from 'vue'
+    "allowSyntheticDefaultImports": true,
+
+    "noEmitOnError": true,
+
+    // 编译过程中需要引入的库文件的列表
+    "lib" : [
+      "es7",
+      "esnext",
+      "es2015",
+      "es6",
+      "es5"
+    ]
+  },
+
+  "include": [
+    "./*.ts",
+    "src/**/*",
+    "app/**/*",
+    "config/**/*",
+    "test/**/*",
+    "lib/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
