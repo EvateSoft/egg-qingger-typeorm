@@ -6,7 +6,7 @@
  */
 const qinggerTypeorm = require("./lib/qinggerTypeorm");
 module.exports = function (agent) {
-    if (agent.config.typeorm.agent) {
+    if (agent.config.qinggerTypeorm.agent) {
         return qinggerTypeorm(agent);
     }
 };
