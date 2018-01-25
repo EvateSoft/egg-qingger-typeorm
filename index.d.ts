@@ -6,8 +6,10 @@
 import {Connection} from "typeorm";
 
 declare module 'egg' {
+
     export interface Application {
-        typeorm : Connection,
+        qinggerTypeorm : Connection,
         config : any
     }
+
 }
