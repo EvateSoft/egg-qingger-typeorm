@@ -9,7 +9,7 @@ const qinggerTypeorm = require("./lib/qinggerTypeorm");
 import {Application} from "egg";
 
 module.exports = function (app:Application) {
-    if (app.config.qinggerTypeorm.app) {
+    if (app.config.qinggerTypeorm) {
         qinggerTypeorm(app);
     }
 };

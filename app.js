@@ -8,7 +8,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const qinggerTypeorm = require("./lib/qinggerTypeorm");
 module.exports = function (app) {
-    if (app.config.qinggerTypeorm.app) {
+    if (app.config.qinggerTypeorm) {
         qinggerTypeorm(app);
     }
 };
