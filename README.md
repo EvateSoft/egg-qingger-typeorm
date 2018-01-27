@@ -45,6 +45,23 @@ exports.qinggerTypeorm = {
 ```js
 // {app_root}/config/config.default.js
 exports.qinggerTypeorm = {
+   "type": "mysql",
+   "host": "localhost",
+   "port": 3306,
+   "username": "test",
+   "password": "test",
+   "database": "test",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ]
 };
 ```
 
@@ -52,7 +69,16 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
-<!-- example here -->
+```javascript
+    // save object
+    const photo = new Photo();
+    photo.name = 'P1';
+    photo.fileName = 'p1.png';
+    photo.isPublished = true;
+    photo.views = 0;
+    let ret = await this.app.qinggerTypeorm.manager.save(photo);
+    
+```
 
 ## Questions & Suggestions
 
