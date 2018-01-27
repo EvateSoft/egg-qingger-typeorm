@@ -44,6 +44,7 @@ exports.qinggerTypeorm = {
 
 ```js
 // {app_root}/config/config.default.js
+// see detail : http://typeorm.io/#/connection-options
 exports.qinggerTypeorm = {
    "type": "mysql",
    "host": "localhost",
@@ -70,6 +71,7 @@ see [config/config.default.js](config/config.default.js) for more detail.
 ## Example
 
 ```javascript
+    // @see detail : http://typeorm.io/
     // save object
     const photo = new Photo();
     photo.name = 'P1';
