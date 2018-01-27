@@ -10,7 +10,7 @@
     // 使用koa2,则编译成下一个es版本(es2017)
     "target": "esnext",
 
-    "sourceMap": true,
+    "sourceMap": false,
 
     // Raise error on expressions and declarations with an implied ‘any’ type.
     "noImplicitAny": false,
@@ -25,6 +25,9 @@
     "allowSyntheticDefaultImports": true,
 
     "noEmitOnError": true,
+
+    // 编译后的路径
+    "outDir": "./dist",
 
     // 编译过程中需要引入的库文件的列表
     "lib" : [
