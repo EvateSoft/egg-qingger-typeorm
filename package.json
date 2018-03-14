@@ -2,8 +2,8 @@
   "name": "egg-qingger-typeorm",
   "version": "1.0.1",
   "description": "egg plugin for typeorm",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
   "eggPlugin": {
     "name": "qinggerTypeorm",
     "dependencies": [],
