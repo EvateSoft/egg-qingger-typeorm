@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "egg plugin for typeorm",
   "main": "dist/app.js",
-  "types": "dist/app.d.ts",
+  "types": "dist/index.d.ts",
   "eggPlugin": {
     "name": "qinggerTypeorm",
     "dependencies": [],
