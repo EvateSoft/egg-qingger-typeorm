@@ -15,11 +15,8 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "egg-mongoose": "^2.1.1",
-    "egg-typeorm": "^1.0.2",
-    "mysql": "^2.15.0",
     "reflect-metadata": "^0.1.12",
-    "typeorm": "^0.1.11"
+    "typeorm": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^9.3.0",
