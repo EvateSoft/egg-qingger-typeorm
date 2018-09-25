@@ -1,6 +1,6 @@
 {
   "name": "egg-qingger-typeorm",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "egg plugin for typeorm",
   "main": "app.js",
   "types": "index.d.ts",
