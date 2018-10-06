@@ -27,7 +27,7 @@
     "noEmitOnError": true,
 
     // 编译后的路径
-//    "outDir": "./dist",
+    "outDir": "./dist",
 
     // 生成相应的 .d.ts文件。
     "declaration": true,
