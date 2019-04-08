@@ -15,6 +15,8 @@ module.exports = async function (app:Application) {
     let connection = await createConnection(app.config.qinggerTypeorm);
     app.qinggerTypeorm = connection;
 
+    ///@ts-ignore : assign app to connection object
+    connection.app = app;
     let count = 1;
     app.beforeStart(async function startMysql() {
         const rows = await connection.manager.query('select 1 as column1;');
