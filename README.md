@@ -89,13 +89,16 @@ Please open an issue [here](https://github.com/eggjs/egg/issues).
 
 ## Update
 ```bash
+注意，不使用dist目录下编译的文件
 $ tsc
+$ git add . / git commit
 $ npm config set registry https://registry.npmjs.org/
-$ npm login
+$ npm login  
 $ npm who am i
 $ npm version patch / minor / major
 $ npm publish
 $ npm logout
+$ git push
 ```
 
 ## License
