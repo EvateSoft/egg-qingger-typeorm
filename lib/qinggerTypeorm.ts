@@ -1,7 +1,7 @@
 /// <reference path="../index.d.ts" />
 import "reflect-metadata";
 const assert = require("assert");
-import {createConnection} from "typeorm";
+import {createConnection,getConnection} from "typeorm";
 import {Application} from "egg";
 
 module.exports = async function (app:Application) {
@@ -12,7 +12,13 @@ module.exports = async function (app:Application) {
     assert((config.username && config.password && config.host)||config.replication,
         `[egg-typeorm] 'username: ${config.username}','password: ${config.password}', 'host: ${config.host}' are required on config`);
 
-    let connection = await createConnection(app.config.qinggerTypeorm);
+    let connection = await createConnection(app.config.qinggerTypeorm).catch((e)=>{
+        if (e.name && e.name.match(/AlreadyHasActiveConnectionError/i))  {
+            console.log("--------------------------->",e.message);
+            return getConnection();
+        }
+        throw e;
+    });
     app.qinggerTypeorm = connection;
 
     ///@ts-ignore : assign app to connection object

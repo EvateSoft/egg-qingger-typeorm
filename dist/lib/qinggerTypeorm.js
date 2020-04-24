@@ -8,7 +8,13 @@ module.exports = async function (app) {
     let config = app.config.qinggerTypeorm;
     assert(config.type && config.database, `[egg-typeorm] 'host: ${config.type}', 'database: ${config.database}' are required on config`);
     assert((config.username && config.password && config.host) || config.replication, `[egg-typeorm] 'username: ${config.username}','password: ${config.password}', 'host: ${config.host}' are required on config`);
-    let connection = await typeorm_1.createConnection(app.config.qinggerTypeorm);
+    let connection = await typeorm_1.createConnection(app.config.qinggerTypeorm).catch((e) => {
+        if (e.name && e.name.match(/AlreadyHasActiveConnectionError/i)) {
+            console.log("--------------------------->", e.message);
+            return typeorm_1.getConnection();
+        }
+        throw e;
+    });
     app.qinggerTypeorm = connection;
     ///@ts-ignore : assign app to connection object
     connection.app = app;
