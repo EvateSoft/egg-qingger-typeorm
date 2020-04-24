@@ -94,7 +94,7 @@ $ tsc
 $ git add . / git commit
 $ npm config set registry https://registry.npmjs.org/
 $ npm login  
-$ npm who am i
+$ npm whoami
 $ npm version patch / minor / major
 $ npm publish
 $ npm logout
